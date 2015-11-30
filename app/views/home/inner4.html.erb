@@ -1,0 +1,155 @@
+<div class="full_wrapper">
+      <div class="site_container">
+        <%#=form_for @cart, :url => {:action => 'create'} do |f| %>
+      <div class="betcam_wrap">
+     <!--  <a href="<%#=home_index_path%>" class="active">Home</a> -->
+      <!-- <span><%#= image_tag 'right_arrow_03.png'%></span>
+      <a href="#">Group Deals</a>
+      <span><%#= image_tag 'right_arrow_03.png'%></span>
+      <a href="#">Chattanooga</a>
+      <span><%#= image_tag 'right_arrow_03.png'%></span>
+      <a href="#">Dannys Service Center zxfsz</a> </div> -->
+<%= form_for @cart,:url => {:action => 'innercreate4'} do |f| %>
+
+      <div class="product_full_wrapper">
+      
+         <div class="product_inner_wrap">
+            <h2>Dannys Service Center</h2>   
+
+            <div class="product_inner_left">
+            
+              <div><%= image_tag 'juicemain.jpg'%></div>
+              <h3>Ingredients:</h3>
+              <ul class="product_lists">
+              
+                <li>
+                  <%= image_tag 'milk.jpg', :style => 'height:100px'%>
+                  <br>
+                  <span>Add to cart:</span>
+                  <%= check_box("product", "0", { },'milk.jpg' ) %>
+                  <br>
+                  <span>Quantity:</span>
+                  
+                  <%= text_field_tag 'quant[0]','', :style => "width:22px;" %>
+                  <span>Price:</span>
+                  <%= text_field_tag 'price[0]','12',:readonly => true, :style => "width:22px;" %>
+                  <%= hidden_field_tag 'user[0]',current_user.id %>
+                </li>
+                <li>
+                  <%= image_tag 'apple.jpg', :style => 'height:100px'%>
+                  <br>
+                  <span>Add to cart:</span>
+                  <%= check_box("product", "1", { },'apple.jpg' ) %>
+                  <br>
+                  <span>Quantity:</span>
+                 <%= text_field_tag 'quant[1]','', :style => "width:22px;" %>
+                 <span>Price:</span>
+                 <%= text_field_tag 'price[1]','12',:readonly => true, :style => "width:22px;" %>
+                 <%= hidden_field_tag 'user[1]',current_user.id %>
+                </li>
+                <li>
+                  <%= image_tag 'orange.jpg', :style => 'height:100px'%> 
+                  <br>
+                  <span>Add to cart:</span>
+                  <%= check_box("product", "2", { },'orange.jpg' ) %>
+                  <br>
+                  <span>Quantity:</span>
+                  <%= text_field_tag 'quant[2]','', :style => "width:22px;" %>
+                  <span>Price:</span>
+                  <%= text_field_tag 'price[2]','12',:readonly => true, :style => "width:22px;" %>
+                  <%= hidden_field_tag 'user[2]',current_user.id %>
+                </li>
+                <li>
+                  <%= image_tag 'sugar.jpg', :style => 'height:100px'%> 
+                  <br>
+                  <span>Add to cart:</span>
+                  <%= check_box("product", "3", { },'sugar.jpg' ) %>
+                  <br>
+                  <span>Quantity:</span>
+                  <%= text_field_tag 'quant[3]','', :style => "width:22px;" %>
+                  <span>Price:</span>
+                  <%= text_field_tag 'price[3]','12',:readonly => true, :style => "width:22px;" %>
+                  <%= hidden_field_tag 'user[3]',current_user.id %>
+                </li>
+                <!-- <li><%#= image_tag '.jpg'%> <br>
+                <span>Add to cart:</span><input type="checkbox" name="check" value=""><br><span>Quantity:</span><input type="text" name="quantity" value="" style="  width: 22px;"></li> -->
+              <div class="clear_fix"></div>
+              
+              </ul>
+            
+            </div><!--product_inner_left-->
+
+            <div class="product_inner_right">
+            
+                <ul class="service_list">
+                
+                  <li>
+                   <!-- <p>NOW FROM</p> -->
+                   
+                  <!--  <div class="price_value">$<%#=@homes. price%> 30<span>$50</span></div> -->
+                   <!-- <div class="price_discount">Extra $5 Off Ends 12/1</div>
+                   <div> -->
+                   <div>
+                   <%= submit_tag 'Buy',:class => 'buy_wrap', :onclick =>"return validateform()"%>
+                   </div>
+                   
+                  </li>
+                
+
+
+                  <li>
+                   <p>SALE STARTED AT</p>
+                   <div class="sale_ending"><%= image_tag 'service_center_14.png'%> <%#= @homes.created_at.strftime("%m-%d-%Y") %></div>
+                  
+                  </li>
+
+                  <li>
+                   <p>LIMITED QUANTITY AVAILABLE</p>
+                   <div class="quantity_limit"><%= image_tag 'service_center_17.png'%> Over 1,000 bought</div>
+                    
+                  
+                  </li>
+
+
+
+                  <li>
+                   <p>SHARE THIS DEAL</p>
+                   <div style="margin-top:10px;">
+                   <a href="#"><%= image_tag 'service_center_31.png'%></a>
+                   <a href="#"><%= image_tag 'service_center_33.png'%></a>
+                   <a href="#"><%= image_tag 'service_center_35.png'%></a>
+                   <a href="#"><%= image_tag 'service_center_37.png'%></a>
+                   <a href="#"><%= image_tag 'fb_likes_40.png'%></a>
+                   <a href="#"><%= image_tag 'fb_likes_42.png'%></a>
+                   </div>
+                  </li>
+                
+                </ul>
+            
+            </div><!--product_inner_right-->
+            
+            <div class="clear_fix"></div>
+            
+            <div style="border-top:1px dashed #bbbbbb; margin:10px 0px;"></div> 
+            <h4>Description</h4>
+            <p>Prepare your fruits or vegetables. Wash and rinse them, first, then remove any parts that might be tough or bitter.
+Remove the eyes from pineapples, and the fibrous core.
+Split apples, cucumbers, watermelons, and similar fruits and vegetables, and remove their seeds and any stems.
+Use seedless grapes, and make sure there are no stems lingering.
+Peel bananas, avocados, oranges, and any other fruit or vegetable with a tough skin.
+For citrus fruits, remove the pith (the white fibrous stuff) as well.</p>
+            
+        </div>
+      
+     <div class="clear_fix"></div>
+     
+     </div><!--product_full_wrapper-->
+     <% end %>
+      </div>
+     </div>
+<script type="text/javascript">
+  function validateform()
+  {
+    
+  }
+</script>
